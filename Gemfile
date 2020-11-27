@@ -1,24 +1,26 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails',      '6.0.3.4'
-gem 'puma',       '4.3.5'
-gem 'sass-rails', '6.0.0'
-gem 'webpacker',  '4.2.2'
-gem 'turbolinks', '5.2.1'
-gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
+gem 'jbuilder',   '2.10.0'
+gem 'puma',       '4.3.5'
+gem 'rails',      '6.0.3.4'
+gem 'sass-rails', '6.0.0'
+gem 'turbolinks', '5.2.1'
+gem 'webpacker',  '4.2.2'
 
 group :development, :test do
+  gem 'byebug',  '11.1.3', platforms: %i[mri mingw x64_mingw]
   gem 'sqlite3', '1.4.2'
-  gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem 'web-console',           '4.0.2'
   gem 'listen',                '3.2.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'web-console',           '4.0.2'
 end
 
 group :test do
